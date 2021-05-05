@@ -1,0 +1,8 @@
+mat223
+online homework, 10.0, 87.0
+perusall, 10.0, 95.0
+tutorial presentations, 30.0, 100.0
+written homework, 10.0, 100.0
+midterm 1, 15.0, 87.5
+midterm 2, 10.0, 54.0
+final exam, 15.0, 62.0

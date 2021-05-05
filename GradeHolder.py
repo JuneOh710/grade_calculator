@@ -1,6 +1,7 @@
 from prettytable import PrettyTable
 from grade import Grade
 
+
 class GradeHolder:
     """Keeps track of the grades for a given course"""
 
@@ -24,7 +25,7 @@ class GradeHolder:
              grade.mark])
         self.curr_weight += grade.weight
         self.curr_points += grade.point
-        f = open(f"{self.name}.txt", "w")
+        f = open(f"grades/{self.name}.txt", "w")
         f.write(f"{self.str_data[0][0]}\n")
         # the big-oh on this thing is terrible lol.
         for line in self.str_data[1:]:

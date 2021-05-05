@@ -24,8 +24,9 @@ if __name__ == "__main__":
         action = input("would you like use the data from "
                        "an existing file? (yes, no)\n").lower().rstrip()
         if action == "yes":
-            f = open(f"{course_name}.txt", "r")
+            f = open(f"grades/{course_name}.txt", "r")
             grade_holder = initialize_from_file(f)
+            f.close()
             initialize = False
         elif action == "no":
             initialize = False

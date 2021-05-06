@@ -4,17 +4,6 @@ from GradeHolder import GradeHolder
 from grade import Grade
 
 
-def initialize_from_file(file: TextIO) -> GradeHolder:
-    """Initialize and return a GradeHolder object from the given file"""
-    holder = GradeHolder(file.readline().rstrip())
-    line = file.readline().rstrip().split(",")
-    while line != ['']:
-        grade = Grade(line[0], float(line[1]), float(line[2]))
-        holder.add_grade(grade)
-        line = file.readline().rstrip().split(",")
-    return holder
-
-
 if __name__ == "__main__":
     course_name = input("which course? ").lower().rstrip()
     grade_holder = GradeHolder(course_name)
@@ -24,9 +13,7 @@ if __name__ == "__main__":
         action = input("would you like use the data from "
                        "an existing file? (yes, no)\n").lower().rstrip()
         if action == "yes":
-            f = open(f"grades/{course_name}.txt", "r")
-            grade_holder = initialize_from_file(f)
-            f.close()
+            grade_holder.initialize_from_file(f"grades/{course_name}.txt")
             initialize = False
         elif action == "no":
             initialize = False

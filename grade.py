@@ -1,5 +1,9 @@
 class Grade:
     """Grade class"""
+    mark: float
+    assessment_name: str
+    point: float
+    weight: float
 
     def __init__(self, name_p: str, weight_p: float, mark_p: float) -> None:
         """Initialize a new grade object"""

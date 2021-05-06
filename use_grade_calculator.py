@@ -29,4 +29,3 @@ else:
         print(courses[course_name])
     else:
         print("try again")
-# this is a useless comment

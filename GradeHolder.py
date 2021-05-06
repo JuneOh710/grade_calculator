@@ -12,25 +12,40 @@ class GradeHolder:
         self.grade_table.field_names = ["Assessment", "Weight", "Grade"]
         self.curr_weight = 0.0
         self.curr_points = 0.0
-        self.str_data = [[self.name]]
+        # self.str_data = [[self.name]]
 
-    def add_grade(self, grade: Grade) -> None:
-        """Add a new grade to this grade holder"""
-        if grade.mark == -1:
-            return None
+    def initialize_from_file(self, file_name: str) -> None:
+        """fill in this course from an existing file"""
+        grade_file = open(file_name, "r")
+        self.name = grade_file.readline().rstrip()
+        line = grade_file.readline().rstrip().split(",")
+        while line != ['']:
+            grade = Grade(line[0], float(line[1]), float(line[2]))
+            # add this grade to grade_table.
+            self.add_grade(grade)
+            line = grade_file.readline().rstrip().split(",")
+        grade_file.close()
+
+    def add_grade(self, grade: Grade, write=False) -> None:
+        """Add a new grade to this grade holder (grade_table)
+
+        Optional: write this new grade to the data file
+        """
         self.grade_table.add_row([grade.assessment_name, grade.weight,
                                   grade.mark])
-        self.str_data.append(
-            [grade.assessment_name, grade.weight,
-             grade.mark])
+        # self.str_data.append(
+        #     [grade.assessment_name, grade.weight,
+        #      grade.mark])
         self.curr_weight += grade.weight
         self.curr_points += grade.point
-        f = open(f"grades/{self.name}.txt", "w")
-        f.write(f"{self.str_data[0][0]}\n")
-        # the big-oh on this thing is terrible lol.
-        for line in self.str_data[1:]:
-            f.write(f"{line[0]}, {line[1]}, {line[2]}\n")
-        f.close()
+        if write:
+            f = open(f"grades/{self.name}.txt", "a")
+            f.write(f"{grade.assessment_name}, {grade.weight}, {grade.mark}\n")
+            # f.write(f"{self.str_data[0][0]}\n")
+            # # the big-oh on this thing is terrible lol.
+            # for line in self.str_data[1:]:
+            #     f.write(f"{line[0]}, {line[1]}, {line[2]}\n")
+            f.close()
 
     def get_current_grade(self) -> str:
         """Returns the user's current grade"""

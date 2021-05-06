@@ -1,5 +1,4 @@
 from __future__ import annotations
-from typing import *
 from GradeHolder import GradeHolder
 from grade import Grade
 

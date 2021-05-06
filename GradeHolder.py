@@ -12,7 +12,6 @@ class GradeHolder:
         self.grade_table.field_names = ["Assessment", "Weight", "Grade"]
         self.curr_weight = 0.0
         self.curr_points = 0.0
-        # self.str_data = [[self.name]]
 
     def initialize_from_file(self, file_name: str) -> None:
         """fill in this course from an existing file"""
@@ -33,18 +32,12 @@ class GradeHolder:
         """
         self.grade_table.add_row([grade.assessment_name, grade.weight,
                                   grade.mark])
-        # self.str_data.append(
-        #     [grade.assessment_name, grade.weight,
-        #      grade.mark])
+
         self.curr_weight += grade.weight
         self.curr_points += grade.point
         if write:
             f = open(f"grades/{self.name}.txt", "a")
             f.write(f"{grade.assessment_name}, {grade.weight}, {grade.mark}\n")
-            # f.write(f"{self.str_data[0][0]}\n")
-            # # the big-oh on this thing is terrible lol.
-            # for line in self.str_data[1:]:
-            #     f.write(f"{line[0]}, {line[1]}, {line[2]}\n")
             f.close()
 
     def get_current_grade(self) -> str:

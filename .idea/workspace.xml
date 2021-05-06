@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85c32e87-aecc-4855-9f66-b34053394084" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/functional_grade_calculator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade_calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GradeHolder.py" beforeDir="false" afterPath="$PROJECT_DIR$/GradeHolder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bio220.txt" beforeDir="false" afterPath="$PROJECT_DIR$/grades/bio220.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csc165.txt" beforeDir="false" afterPath="$PROJECT_DIR$/grades/csc165.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mat223.txt" beforeDir="false" afterPath="$PROJECT_DIR$/grades/mat223.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oop_grade_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/oop_grade_calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/use_grade_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/use_grade_calculator.py" afterDir="false" />
-    </list>
+    <list default="true" id="85c32e87-aecc-4855-9f66-b34053394084" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

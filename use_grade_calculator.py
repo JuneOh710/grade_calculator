@@ -11,7 +11,7 @@ message = "select action:\n" \
           "sa: see all courses\n"
 
 action = input(message)
-
+# this is a comment
 if action == "sa":
     for course in courses:
         print(courses[course])

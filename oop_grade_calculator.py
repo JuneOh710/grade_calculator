@@ -33,7 +33,7 @@ if __name__ == "__main__":
             weight = float(input("weight of assessment: "))
             mark = float(input("Grade you got: "))
             new_grade = Grade(name, weight, mark)
-            grade_holder.add_grade(new_grade)
+            grade_holder.add_grade(new_grade, write=True)
         elif action == "s":
             print(grade_holder)
         elif action == "c":

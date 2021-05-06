@@ -11,3 +11,4 @@ lab quiz 4, 2.0, 25.0
 lab assignment 4, 4.0, 56.82
 lab quiz 5, 2.0, 75.0
 lab 5 assignment, 4.0, 88.64
+final exam, 33.0, 76.0

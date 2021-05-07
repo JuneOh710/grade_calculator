@@ -1,13 +1,6 @@
 from __future__ import annotations
 from GradeHolder import GradeHolder
 from grade import Grade
-from tkinter import *
-
-window = Tk()
-window.minsize(width=500, height=300)
-window.title("Grade Calculator")
-
-window.mainloop()
 
 
 course_name = input("which course? ").lower().rstrip()
